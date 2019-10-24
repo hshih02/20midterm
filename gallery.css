@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(71, 81, 97);
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.large{
+    width: 100%;
+    height: 400px;
+}
+
+#largeImage{
+    max-height: 500px;
+    max-width: auto;
+}
+
+.small {
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  position: relative;
+  width: 385px;
+  height: 220px;
+  margin: 80px auto;
+  margin-bottom: 20px;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+/* citation: https://3dtransforms.desandro.com/carousel*/
+.carouselCell {
+  position: absolute;
+  width: 360px;
+  height: 190px;
+  left: 10px;
+  top: 10px;
+  border: 1px solid rgb(71, 81, 97);
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+}
+
+.art{
+    width: 358px;
+    height: 188px;
+    object-fit: fill !important;
+}
+
+.carouselCell:nth-child(1) { transform: rotateY(  0deg) translateZ(275px); }
+.carouselCell:nth-child(2) { transform: rotateY( 72deg) translateZ(275px); }
+.carouselCell:nth-child(3) { transform: rotateY( 144deg) translateZ(275px); }
+.carouselCell:nth-child(4) { transform: rotateY(216deg) translateZ(275px); }
+.carouselCell:nth-child(5) { transform: rotateY(288deg) translateZ(275px); }
+
+nav{
+    margin-bottom: 20px;
+}
+
+.carousel-options {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: hsla(0, 0%, 100%, 0.8);
+}
+
+button{
+    all: unset;
+    border: 1px solid #fff;
+    font-family: 'Playfair Display SC', 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    color: #fff;
+    padding: 10px;
+    width: 120px;
+    margin: 5px;
+    background-color: rgb(71, 81, 97);
+    transition-timing-function: ease-in;
+}
+
+button:hover{
+    transition: all 1s;
+    background-color: rgb(205, 208, 212);
+    color: #000;
+}
+
+p{
+    margin: 0;
+    margin-top: 60px;
+    text-align: center center;
+    line-height: 30px;
+    font-size: 12pt;
+    font-family: 'Playfair Display SC', 'Times New Roman', Times, serif;
+}
