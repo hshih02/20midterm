@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="bada.css">
     <title>BADA</title>
     <style>
-        h1{
+        h1 {
             font-family: 'Playfair Display', serif;
             font-size: 70pt;
             padding: 10px;
@@ -17,66 +18,77 @@
             width: 800px;
             transition-timing-function: ease-in;
             margin: 0%;
+            transition: .9s;
         }
-        h1:hover{
-            transition: padding 1.5s;
+
+        h1:hover {
+            transition: .9s;
             padding: 20px;
             background: #000;
             color: #fff;
             width: 800px;
         }
-        #box{
+
+        #box {
             background: #000;
             width: 15px;
             margin: 50px;
             display: inline-block;
 
         }
-        .frame{
+
+        .frame {
             margin: 30px;
             display: inline-block;
-            width:520px;
+            width: 520px;
             height: 780px;
             padding: 0%;
             position: fixed;
             background: black;
 
         }
-        #art{
+
+        #art {
             position: relative;
             width: 520px;
             padding: 70px;
         }
-        footer{
+
+        footer {
             padding: 50px;
             text-align: center;
             font-size: 14px;
 
         }
-        a:link{
-            color:#000;
+
+        a:link {
+            color: #000;
         }
-        li{
+
+        li {
             line-height: 3.0;
         }
+
+
     </style>
 </head>
+
 <body>
     <h1>
-        <div id="box">&nbsp;&nbsp;The &nbsp;&nbsp;Boston &nbsp;&nbsp;Art  &nbsp;&nbsp;Dealers' &nbsp;&nbsp;Association</div>
+        <div id="box">&nbsp;&nbsp;The &nbsp;&nbsp;Boston &nbsp;&nbsp;Art &nbsp;&nbsp;Dealers' &nbsp;&nbsp;Association</div>
     </h1>
     <div class="frame">
         <img id="art" src="hangingFire.jpg">
     </div>
-    
+
     <nav>
         <ul>
-            <li><a href="about.html" title="About">About</a></li><br />
-            <li><a href="gallery.html" title="Gallery">Gallery</a></li><br />
-            <li><a href="events.html" title="Events">Events</a></li><br />
-            <li><a href="participate.html" title="Participate">Participate</a></li><br /> <!-- the two-forms page -->
-            <li><a href="store.html" title="Store">Store</a></li><br />
-            <li><a href="contact.html" title="Contact">Contact</a></li>
+            <li><a href="about.html" class="sidebar" title="About">About</a></li><br/>
+            <li><a href="gallery.html" class="sidebar" title="Gallery">Gallery</a></li><br/>
+            <li><a href="events.html" class="sidebar" title="Events">Events</a></li><br/>
+            <li><a href="participate.html" class="sidebar" title="Participate">Participate</a></li><br /> <!-- the two-forms page -->
+            <li><a href="store.html" class="sidebar" title="Store">Store</a></li><br/>
+            <li><a href="contact.html" class="sidebar" title="Contact">Contact</a></li>
         </ul>
     </nav>
     <footer>
@@ -84,4 +96,5 @@
     </footer>
 
 </body>
+
 </html>
