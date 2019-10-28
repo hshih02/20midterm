@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="bada.css">
-    <title>Participate</title>
+    <title>Participate/title>
     <style>
-        a:link{
+        a:link {
             color: black;
         }
-        li{
+        li {
             line-height: 3.0;
         }
-        .container{
+        .container {
             display: flex;
         }
-        nav{
+        nav {
             flex-basis: 200px;
         }
-        main{
+        main {
             padding-left: 100px;
         }
-        p{
+        p {
             font-family: arial, 'Playfair Display', serif;
             font-size: 13pt;
             line-height: 1.5;
         }
-        .row {
+
+        .col1 {
+                color: #000000;
+                font-family: Arial, sans-serif;
+                font-size: 10.5pt;
+                padding: 2pt;
+            }
+        
+        .col2 {
+                padding-bottom: 5px;
+        }
+
+        .donateform {
             display: flex;
         }
 
-        .column {
-            flex: 50%;
+        .donateinfo {
+            padding-right: 20px;
         }
+
+        .payment {
+            padding-left: 50px;
+        }
+
+        textarea {
+            resize: none;
+        }
+        
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+
     </style>
 
 </head>
+
 <body>
     <h2>&nbsp;Participate</h2>
     <div class="container">
@@ -52,118 +81,130 @@
             </ul>
         </nav>
         <main>
-            <div class="row">
-    <div class="column">
-      <form class="form" method="get">
-        <h1>Apply to have your art displayed!</h1>
-        <div class='col1'>Full Name:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="enter your name">
-        </div>
-        <div class='col1'>Email:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="enter your email address">
-        </div>
-        <div class='col1'>Phone Number:</div>
-        <div class='col2'><input type= "text" name="phone" id="phone" placeholder="enter your phone #">
-        </div>
-        <div class='col1'>How many pieces of art would you like to showcase?</div>
-        <div>
-          <input type="number" name="amount" min="1">
-        </div>
-        <div class='col1'>Please tell us a little about yourself:</div>
-        <div class='col2'><textarea row=2 cols=62 placeholder="explain here"></textarea>
-        </div>
-        <div class='col1'>Briefly describe the work you would like to be displayed:</div>
-        <div class='col2'><textarea row=2 cols=62 placeholder="explain here"></textarea>
-        </div>
-      </br>
-      <input type='button' onclick='apply()' value="Apply!">
-      </form>
-    </div>
-    <div class="column">
-      <form class="form" method="get">
-        <h1>Make a donation!</h1>
-        <div class='col1'>Full Name:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="enter your name">
-        </div>
-        <div class='col1'>Email:</div>
-        <div class='col2'>
-          <div class='col2'><input type= "text" name="email" id="email" placeholder="enter your email address">
-          </div>
-          <div class='col1'>Phone Number:</div>
-          <div class='col2'><input type= "text" name="phone" id="phone" placeholder="enter your phone #">
-          </div>
-          <div class='col1'>Which member gallery would you like to donate to?</div>
-          <select size="6" name='gallerie' id='galleries' multiple>
-            <option value='Adelson Galleries Boston'>Adelson Galleries Boston</option>
-            <option value='Alpha Gallery'>Alpha Gallery</option>
-            <option value='Boston Sculptors Gallery'>Boston Sculptors Gallery</option>
-            <option value='Bromfield Gallery'>Bromfield Gallery</option>
-            <option value='Chase Young Gallery'>Chase Young Gallery</option>
-            <option value='Clark Gallery'>Clark Gallery</option>
-            <option value='Fountain Street Fine Art'>Fountain Street Fine Art</option>
-            <option value='Galatea Fine Art'>Galatea Fine Art</option>
-            <option value='Gallery Kayafas'>Gallery Kayafas</option>
-            <option value='Kingston Gallery'>Kingston Gallery</option>
-            <option value='Andrea Marquit Fine Arts'>Andrea Marquit Fine Arts</option>
-            <option value='Howard Yezerski Gallery'>Howard Yezerski Gallery</option>
-            <option value='Gallery NAGA'>Gallery NAGA</option>
-            <option value='Abigail Ogilvy Gallery'>Abigail Ogilvy Gallery</option>
-            <option value='Pucker Gallery'>Pucker Gallery</option>
-            <option value='Soprafina Gallery '>Soprafina Gallery </option>
-            <option value='Beth Urdang Gallery'>Beth Urdang Gallery</option>
-          </select>
-          <div class='col1'>Enter the amount you would like to donate:</div>
-          <div>
-            $
-            <input type="number" name="amount" min="1">
-          </div>
-        </div>
-        <div class='col1'>Please tell us a little about yourself and what led you to donate:</div>
-        <div class='col2'><textarea row=2 cols=62 placeholder="explain here"></textarea>
-        </div>
-        <h4 class='col1'>Payment</h4>
-        <div class='col1'>Accepted Cards: VISA, AMEX, MASTERCARD, DISCOVERY</div><br>
-        <div class='col1'>Name on Card:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="John More Doe">
-        </div>
-        <div class='col1'>Exp Month:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="September">
-        </div>
-        <div class='col1'>Exp Year:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="2019">
-        </div>
-        <div class='col1'>CVV:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="420">
-        </div>
-        <div class='col1'>Billing Address:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="542 W. 15th Street">
-        </div>
-        <div class='col1'>City:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="New York">
-        </div>
-        <div class='col1'>Zip:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="10001">
-        </div>
-        <div class='col1'>State:</div>
-        <div class='col2'><input type= "text" name="name" id="name" placeholder="NY">
-        </br>
-      </br>
-      <input type='button' onclick='thanks()' value="Donate!">
-    </form>
-    <script language="javascript" type="text/javascript"> 
+            <div class="formsdiv">
+                <div class="applyform">
+                    <form class="form" method="get">
+                        <h3>Apply to have your art displayed</h3>
+                        <div class="col1">Full Name:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="Full name">
+                        </div>
+                        <div class="col1">Email:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="Email address">
+                        </div>
+                        <div class="col1">Phone Number:</div>
+                        <div class="col2"><input type="text" name="phone" id="phone" placeholder="Phone number">
+                        </div>
+                        <div class="col1">How many pieces of art would you like to showcase? (5 pieces max)</div>
+                        <div>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="col1">Please tell us a little about yourself:</div>
+                        <div class="col2"><textarea rows=4 cols=46 placeholder="Explain here"></textarea>
+                        </div>
+                        <div class="col1">Briefly describe the work you would like to be displayed:</div>
+                        <div class="col2"><textarea rows=4 cols=46 placeholder="Explain here"></textarea>
+                        </div>
+                        <input type='button' onclick='apply()' value="Apply!">
+                    </form>
+                </div>
+                <div class="donateform">
+                    <div class="donteinfo">
+                        <form class="form" method="get">
+                            <h3>Make a donation:</h3>
+                            <div class="col1">Full Name:</div>
+                            <div class="col2"><input type="text" name="name" id="name" placeholder="Full Name">
+                            </div>
+                            <div class="col1">Email:</div>
+                            <div class="col2">
+                                <div class="col2"><input type="text" name="email" id="email" placeholder="Email address">
+                                </div>
+                                <div class="col1">Phone Number:</div>
+                                <div class="col2"><input type="text" name="phone" id="phone" placeholder="Phone number">
+                                </div>
+                                <div class="col1">Which member gallery would you like to donate to?</div>
+                                <select size="6" name='gallerie' id='galleries' multiple>
+                                    <option value='Adelson Galleries Boston'>Adelson Galleries Boston</option>
+                                    <option value='Alpha Gallery'>Alpha Gallery</option>
+                                    <option value='Boston Sculptors Gallery'>Boston Sculptors Gallery</option>
+                                    <option value='Bromfield Gallery'>Bromfield Gallery</option>
+                                    <option value='Chase Young Gallery'>Chase Young Gallery</option>
+                                    <option value='Clark Gallery'>Clark Gallery</option>
+                                    <option value='Fountain Street Fine Art'>Fountain Street Fine Art</option>
+                                    <option value='Galatea Fine Art'>Galatea Fine Art</option>
+                                    <option value='Gallery Kayafas'>Gallery Kayafas</option>
+                                    <option value='Kingston Gallery'>Kingston Gallery</option>
+                                    <option value='Andrea Marquit Fine Arts'>Andrea Marquit Fine Arts</option>
+                                    <option value='Howard Yezerski Gallery'>Howard Yezerski Gallery</option>
+                                    <option value='Gallery NAGA'>Gallery NAGA</option>
+                                    <option value='Abigail Ogilvy Gallery'>Abigail Ogilvy Gallery</option>
+                                    <option value='Pucker Gallery'>Pucker Gallery</option>
+                                    <option value='Soprafina Gallery '>Soprafina Gallery </option>
+                                    <option value='Beth Urdang Gallery'>Beth Urdang Gallery</option>
+                                </select>
+                            </div>
 
-    function thanks()
-    {
-        alert("Thank you, your donation is greatly appreciated!")
-    }
-    function apply()
-    {
-        alert("Thanks for applying, we will get back to you within 3-7 business days!")
-    }
-    </script>
-  </div>
-</div>
+                        </form>
+                    </div>
+                    <div class="payment">
+                        <h3>Payment</h3>
+                        <div class="col1" style="font-size: 9.5pt;">Accepted Cards: VISA, MASTERCARD, DISCOVERY</div><br>
+                        <div class="col1">Name on Card:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="John More Doe">
+                        </div>
+                        <div class="col1">Exp Month:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="September">
+                        </div>
+                        <div class="col1">Exp Year:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="2019">
+                        </div>
+                        <div class="col1">CVV:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="420">
+                        </div>
+                        <div class="col1">Billing Address:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="542 W. 15th Street">
+                        </div>
+                        <div class="col1">City:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="New York">
+                        </div>
+                        <div class="col1">Zip:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="10001">
+                        </div>
+                        <div class="col1">State:</div>
+                        <div class="col2"><input type="text" name="name" id="name" placeholder="NY">
+                        </div>
+                        <div class="col1">Additional comments:</div>
+                        <div class="col2"><textarea rows=2 cols=46></textarea>
+                        </div>
+                        <div class="col1">Donation amount:</div>
+                        <div>
+                            <form style="font-family: arial, sans-serif; font-size: 10pt">
+                                $
+                                <input name="donateAmount" id="donateAmount" pattern="\d+(\.\d{2})?" title="USD currency format">
+                                <input type='submit' onclick='thanks()' value="Donate!">
+                            </form>
+                        </div>
+                        </br>
+                        <script language="javascript" type="text/javascript">
+
+                            function thanks() {
+
+                                alert("Thank you, your donation is greatly appreciated!")
+                            }
+                            function apply() {
+                                alert("Thanks for applying, we will get back to you within 3-7 business days!")
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </body>
+
 </html>
