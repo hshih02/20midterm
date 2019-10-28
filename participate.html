@@ -18,14 +18,17 @@
         .container {
             display: flex;
         }
+
+        main {
+            padding-left: 10px;
+        }
+
         nav {
             flex-basis: 200px;
         }
-        main {
-            padding-left: 100px;
-        }
+
         p {
-            font-family: arial, 'Playfair Display', serif;
+            font-family: arial, sans-serif;
             font-size: 13pt;
             line-height: 1.5;
         }
@@ -50,7 +53,7 @@
         }
 
         .payment {
-            padding-left: 50px;
+            padding-left: 115px;
         }
 
         textarea {
@@ -58,8 +61,8 @@
         }
         
         h3 {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 
 
@@ -84,7 +87,7 @@
             <div class="formsdiv">
                 <div class="applyform">
                     <form class="form" method="get">
-                        <h3>Apply to have your art displayed</h3>
+                        <h3 style="font-size: 20pt">Apply to have your art displayed</h3>
                         <div class="col1">Full Name:</div>
                         <div class="col2"><input type="text" name="name" id="name" placeholder="Full name">
                         </div>
@@ -94,7 +97,7 @@
                         <div class="col1">Phone Number:</div>
                         <div class="col2"><input type="text" name="phone" id="phone" placeholder="Phone number">
                         </div>
-                        <div class="col1">How many pieces of art would you like to showcase? (5 pieces max)</div>
+                        <div class="col1">How many pieces of art would you like to showcase? (5 max)</div>
                         <div>
                             <select>
                                 <option value="1">1</option>
@@ -105,10 +108,10 @@
                             </select>
                         </div>
                         <div class="col1">Please tell us a little about yourself:</div>
-                        <div class="col2"><textarea rows=4 cols=46 placeholder="Explain here"></textarea>
+                        <div class="col2"><textarea rows=4 cols=51 placeholder="Explain here"></textarea>
                         </div>
                         <div class="col1">Briefly describe the work you would like to be displayed:</div>
-                        <div class="col2"><textarea rows=4 cols=46 placeholder="Explain here"></textarea>
+                        <div class="col2"><textarea rows=4 cols=51 placeholder="Explain here"></textarea>
                         </div>
                         <input type='button' onclick='apply()' value="Apply!">
                     </form>
@@ -116,7 +119,7 @@
                 <div class="donateform">
                     <div class="donteinfo">
                         <form class="form" method="get">
-                            <h3>Make a donation:</h3>
+                            <h3 style="font-size: 20pt">Make a donation</h3>
                             <div class="col1">Full Name:</div>
                             <div class="col2"><input type="text" name="name" id="name" placeholder="Full Name">
                             </div>
@@ -152,7 +155,7 @@
                         </form>
                     </div>
                     <div class="payment">
-                        <h3>Payment</h3>
+                        <h3 style="font-size: 20pt">Payment</h3>
                         <div class="col1" style="font-size: 9.5pt;">Accepted Cards: VISA, MASTERCARD, DISCOVERY</div><br>
                         <div class="col1">Name on Card:</div>
                         <div class="col2"><input type="text" name="name" id="name" placeholder="John More Doe">
@@ -177,9 +180,6 @@
                         </div>
                         <div class="col1">State:</div>
                         <div class="col2"><input type="text" name="name" id="name" placeholder="NY">
-                        </div>
-                        <div class="col1">Additional comments:</div>
-                        <div class="col2"><textarea rows=2 cols=46></textarea>
                         </div>
                         <div class="col1">Donation amount:</div>
                         <div>
