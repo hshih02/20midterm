@@ -8,30 +8,42 @@
     <link type="text/css" rel="stylesheet" href="bada.css">
     <title>BADA Contact</title>
     <style>
-        a:link{
+        a:link {
             color: #000;
         }
-        li{
+        li {
             line-height: 3.0;
         }
-        .container{
-            display: flex;
-        }
-        nav{
+        nav {
             flex-basis: 200px;
         }
-        main{
-            padding-left: 100px;
-        }
-        p{
-            margin-left: 400px;
+
+        p {
             font-family: arial, 'Playfair Display', serif;
             font-size: 12pt;
+            float: left;
+            width: 20vh;
+            margin-top: 75px;
+            padding-left: 150px;
+            margin-bottom: 100px;
+        }
+
+        .infodiv {
+            display: flex;
+        }
+        
+        .infotitle {           
+            flex: 50%; 
+            margin-right: 20px;
+        }
+
+        .info {
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <h2>&nbsp;Contact</h2>
+    <h2 style="margin-left: 10vw; margin-right: 20vw">&nbsp;Contact</h2>
     <div class="container">
         <nav>
             <ul>
@@ -44,18 +56,30 @@
             </ul>
         </nav>
         <main>
-            <h3 style="margin-top: 0;">PO Box</h3>
-            <p>
-                170449, Boston, MA 02117
-            </p>
-            <h3>Telephone</h3>
-            <p>
-                617.536.4465
-            </p>
-            <h3>Email</h3> 
-            <p>
-               info@alphagallery.com
-            </p>
+            <div class="infodiv">
+                <div  class="infotitle">
+                    <h3>PO Box</h3>
+                </div>
+                <div class="info">
+                    <p>170449, Boston, MA 02117</p>
+                </div>
+            </div>
+            <div class="infodiv">
+                <div class="infotitle">
+                    <h3>Telephone</h3>
+                </div>
+                <div class="info">
+                    <p>617.536.4465</p>
+                </div>
+            </div>
+            <div class="infodiv">
+                <div class="infotitle">
+                    <h3>Email</h3>
+                </div>
+                <div class="info">
+                    <p>info@alphagallery.com</p>
+                </div>
+            </div>
         </main>
     </div>
 </body>
