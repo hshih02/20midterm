@@ -2,16 +2,18 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 50pt;
     letter-spacing: -3px;
-    padding: 30px;
-    background: #fff;
+    padding: 7px;
+    background: #000;
     color: #000;
-    transition: 0.8s;
+    transition: 1.2s;
     margin-left: 10vw;
     margin-right: 10vw;
+    width: 0pt;
 }
 
 h2:hover {
-    transition: 0.8s;
+    width: 1000px;
+    transition: 1.2s;
     background: #000;
     color: #fff;
 }
@@ -23,12 +25,12 @@ main {
 .container {
     display: flex;
     flex-direction: row;
-    margin-left: 10vw;
-    margin-right: 10vw;
-
+    margin-left: 11vw;
+    margin-right: 11vw;
 }
 
-h3{
+h3 {
+    margin-top: 15px;
     font-family: 'Playfair Display', serif;
     font-size: 30pt;
 }
@@ -38,21 +40,28 @@ a {
     transition-timing-function: ease;
 }
 
-a:visited {
+a:visited{
     color: #000; 
 }
 
-ul {
+ul{
     line-height: 2.0;
     list-style-type: none;
     font-size: 13pt;
     font-family: 'Playfair Display', serif;
 }
 
-li {
+li{
     display: inline-block;
     transition-timing-function: ease-out;
 }
+
+/* a:hover{
+    transition: padding 0.8s;
+    background: #000;
+    padding: 15px;
+    color: #fff;
+} */
 
 .sidebar::after {
     content: "";
