@@ -11,7 +11,9 @@
     <title>BADA - Gallery</title>
     <style>
         main {
-            padding-left: 130px;
+            /* padding-left: 130px; */
+            margin-left: 11vw;
+            margin-right: 11vw;
             font-family: sans-serif;
             text-align: center;
         }
@@ -21,6 +23,11 @@
             background-color: #fff;
         } */
 
+        .container {
+            margin-left: 45%;
+            margin-right: 55%;
+        }
+
         .small {
             display: flex;
             margin: 40px 0;
@@ -28,6 +35,7 @@
             width: 500px;
             height: 300px;
             margin: 80px auto;
+            margin-left: 25%;
             margin-bottom: 150px;
             perspective: 2000px;
         }
@@ -105,7 +113,9 @@
             object-fit: fill;
         }
 
-        .direction {
+        .directionButtons {
+            margin-left: 11vw;
+            margin-right: 11vw;
             display: inline; 
         }
 
@@ -115,20 +125,19 @@
         }
 
         .cont
-
         #content {
-            margin-left: auto;
-            margin-right: auto;
-            align-content: center;
+            display: flex;
+            margin-left: 50%;
+            margin-right: 50%;
             width: 1000px;
             object-fit: fill;
         }
 
-        #info {
+        /* #info {
             text-align: left;
-            margin-left: 15vw;
-            margin-right: 15vw;
-        }
+            margin-left: 11vw;
+            margin-right: 11vw;
+        } */
 
     </style>
 </head>
@@ -158,8 +167,10 @@
                 <div id="fifth" class="carouselCell"> <img id="image4" class="art" src="#"></div>
             </div>
         </div>
-        <button class="direction" id="previous">Previous</button>
-        <button class="direction" id="next">Next</button>
+        <div class="directionButtons">
+            <button class="direction" id="previous">Previous</button>
+            <button class="direction" id="next">Next</button>
+        </div>
         <h1 id="title">&nbsp;</h1> <!-- Title -->
         <div id="content">
             <p id="info">
