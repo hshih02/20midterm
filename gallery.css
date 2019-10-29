@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color: rgb(71, 81, 97);
+    background-color: #fff;
 }
 
 body {
@@ -8,25 +8,14 @@ body {
   text-align: center;
 }
 
-.large{
-    width: 100%;
-    height: 400px;
-}
-
-#largeImage{
-    max-height: 500px;
-    max-width: auto;
-}
-
 .small {
-  border: 1px solid #CCC;
   margin: 40px 0;
   position: relative;
-  width: 385px;
-  height: 220px;
+  width: 600px;
+  height: 300px;
   margin: 80px auto;
-  margin-bottom: 20px;
-  perspective: 1000px;
+  margin-bottom: 150px;
+  perspective: 2000px;
 }
 
 .carousel {
@@ -41,11 +30,11 @@ body {
 /* citation: https://3dtransforms.desandro.com/carousel*/
 .carouselCell {
   position: absolute;
-  width: 360px;
-  height: 190px;
+  width: 600px;
+  height: 300px;
   left: 10px;
   top: 10px;
-  border: 1px solid rgb(71, 81, 97);
+  border: 1px solid #000;
   line-height: 116px;
   font-size: 80px;
   font-weight: bold;
@@ -53,18 +42,17 @@ body {
   text-align: center;
   transition: transform 1s, opacity 1s;
 }
-
 .art{
-    width: 358px;
-    height: 188px;
+    width: 598px;
+    height: 298px;
     object-fit: fill !important;
 }
 
-.carouselCell:nth-child(1) { transform: rotateY(  0deg) translateZ(275px); }
-.carouselCell:nth-child(2) { transform: rotateY( 72deg) translateZ(275px); }
-.carouselCell:nth-child(3) { transform: rotateY( 144deg) translateZ(275px); }
-.carouselCell:nth-child(4) { transform: rotateY(216deg) translateZ(275px); }
-.carouselCell:nth-child(5) { transform: rotateY(288deg) translateZ(275px); }
+.carouselCell:nth-child(1) { transform: rotateY(  0deg) translateZ(450px); }
+.carouselCell:nth-child(2) { transform: rotateY( 72deg) translateZ(450px); }
+.carouselCell:nth-child(3) { transform: rotateY( 144deg) translateZ(450px); }
+.carouselCell:nth-child(4) { transform: rotateY(216deg) translateZ(450px); }
+.carouselCell:nth-child(5) { transform: rotateY(288deg) translateZ(450px); }
 
 nav{
     margin-bottom: 20px;
@@ -86,7 +74,7 @@ button{
     padding: 10px;
     width: 120px;
     margin: 5px;
-    background-color: rgb(71, 81, 97);
+    background-color: #000;
     transition-timing-function: ease-in;
 }
 
@@ -97,10 +85,29 @@ button:hover{
 }
 
 p{
-    margin: 0;
     margin-top: 60px;
-    text-align: center center;
-    line-height: 30px;
-    font-size: 12pt;
+    font-size: 15pt;
+    font-family: 'Times New Roman', Times, serif;
+    height: 300px;
+    width: 1000px;
+    color: #000;
+    text-align: left;
+    object-fit: fill;
+}
+
+.direction{
+    display: inline; 
+}
+
+h1{
     font-family: 'Playfair Display SC', 'Times New Roman', Times, serif;
+    margin-top: 50px;
+}
+
+#content{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    object-fit: fill;
 }
