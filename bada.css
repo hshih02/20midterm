@@ -36,6 +36,7 @@ h3 {
 }
 
 a {
+    color: #000; 
     text-decoration: none;
     transition-timing-function: ease;
 }
