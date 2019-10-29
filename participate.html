@@ -12,9 +12,6 @@
         a:link {
             color: black;
         }
-        li {
-            line-height: 3.0;
-        }
 
         p {
             font-family: arial, sans-serif;
@@ -26,15 +23,18 @@
                 color: #000000;
                 font-family: Arial, sans-serif;
                 font-size: 10.5pt;
-                padding: 2pt;
-            }
+                margin-top: 10pt;
+                margin-bottom: 2pt;
+        }
         
         .col2 {
-                padding-bottom: 5px;
+
+                margin-bottom: 0px;
         }
 
         .donateform {
             display: flex;
+            padding-top: 15px;
         }
 
 
@@ -100,7 +100,7 @@
                         <div class="col1">Briefly describe the work you would like to be displayed:</div>
                         <div class="col2"><textarea rows=4 cols=51 placeholder="Explain here"></textarea>
                         </div>
-                        <input type='button' onclick='apply()' value="Apply!">
+                        <input type='button' onclick='apply()' value="Apply">
                     </form>
                 </div>
                 <div class="donateform">
@@ -118,7 +118,7 @@
                                 <div class="col2"><input type="text" name="phone" id="phone" placeholder="Phone number">
                                 </div>
                                 <div class="col1">Which member gallery would you like to donate to?</div>
-                                <select size="6" name='gallerie' id='galleries' multiple>
+                                <select style="width: 310px;" size="7" name='gallerie' id='galleries' multiple>
                                     <option value='Adelson Galleries Boston'>Adelson Galleries Boston</option>
                                     <option value='Alpha Gallery'>Alpha Gallery</option>
                                     <option value='Boston Sculptors Gallery'>Boston Sculptors Gallery</option>
@@ -173,7 +173,7 @@
                             <form style="font-family: arial, sans-serif; font-size: 10pt">
                                 $
                                 <input name="donateAmount" id="donateAmount" pattern="\d+(\.\d{2})?" title="USD currency format">
-                                <input type='submit' onclick='thanks()' value="Donate!">
+                                <input type='submit' onclick='thanks()' value="Donate">
                             </form>
                         </div>
                         </br>
