@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".flip").flip({
+                trigger: 'click'
+            });
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="bada.css">
-    <title>BADA - Store</title>
+    <title>Store</title>
     <style>
-    a:link {
-        color: black;
-    }
+        p {
+            font-family: arial, 'Playfair Display', serif;
+            font-size: 13pt;
+            line-height: 1.5;
+        }
 
-    p {
-        font-family: arial, 'Playfair Display', serif;
-        font-size: 13pt;
-        line-height: 1.5;
-    }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
 
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-    }
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
 
-    .column {
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-    }
+        .flip img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            height: 95%;
+        }
 
-  .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-        height: 15%;
-    }
+        .flip {
+            transform-style: preserve-3d;
+            height: 250px;
+        }
+
+        .flip .front {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            position: absolute;
+            z-index: 1;
+            transition: all 0.5s ease-out 0s;
+            transform: rotateY(0deg);
+        }
+
+        .flip .back {
+            transform: rotateY(-180deg);
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            position: absolute;
+            z-index: 0;
+            transition: all 0.5 ease-out 0s;
+            text-align: center;
+            vertical-align: center;
+            background: black;
+            color: white;
+        }
+
+        h5 {
+            font-style: Florence;
+            backface-visibility: hidden;
+        }
     </style>
+
 </head>
+
 <body>
-    <h2>&nbsp;&nbsp;&nbsp;Store</h2>
+    <h2>&nbsp;Store</h2>
     <div class="container">
         <nav>
             <ul>
@@ -53,54 +93,165 @@
             </ul>
         </nav>
         <main>
-            <h4>We do not ship our art. All pieces are sold in-store only. Call 617-536-4465 with inqueries.</h4>
+            <h4>We do not ship our art. All pieces are sold in-store only. Call 617-536-4465 with inqueries. Click
+                the pieces of art for more info.</h4>
             <div class="row">
-              <div class="column">
-                <h4>$1m</h4>
-                <img src="store1.jpg">
-                <h4>$250k</h4>
-                <img src="store2.jpg">
-                <h4>$100k</h4>
-                <img src="store3.jpg">
-                <h4>$2m</h4>
-                <img src="store4.jpg">
-                <h4>$750k</h4>
-                <img src="store5.jpg">
-                <h4>$1m</h4>
-                <img src="store6.jpg">
+                <div class="column">
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store1.jpg" alt style="backface-visibility: hidden;">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>1m <br><i>Abstract</i><br>Unknown Artist </h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store2.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>250k <br><i>Summer Profile</i><br>Paul Wright </h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store3.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>100k <br><i>PixCell-Elk#2</i><br>Kohei Nawa</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store4.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>750k <br><i>Swans</i><br>Mike Fields </h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store5.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>1m <br><i>Untitled</i><br>Damon Hydreth </h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store6.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>25k <br><i>Bronze Abstract Wind Woman</i><br>Unknown Artist
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store7.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>250k <br><i>Veiled Souls</i><br>Livio Scarpella</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store8.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>13k <br><i>Large Layered Woman</i><br>Unknown Artist</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store9.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>250k <br><i>2d 3d</i><br>Mark Sheldon</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store10.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>1.8m <br><i>Hollow</i><br>Motohiko Odani</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store11.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>700k <br><i>The Flight of the Swan</i><br>Coderch and Malavia</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store12.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>500k <br><i>Smoke</i><br>Brobas</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="column">
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store13.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>200k <br><i>Close to My Heart</i><br>Osnat Tzadok</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store14.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>250k<br><i>Sunrise</i><br>Osnat Tzadok</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store15.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>500k <br><i>Distance</i><br>Ryan Buell</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store16.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>725k <br><i>City</i><br>Sugar Shane</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store17.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>550k <br><i>Pestilence</i><br>Puff Creon</h4>
+                        </div>
+                    </div>
+                    <div id="flip-this" class="flip">
+                        <div class="front">
+                            <img src="store18.jpg">
+                        </div>
+                        <div class="back">
+                            <h4><br><br><br><br><br>325k <br><i>Splashes of Joy</i><br>Frank Woo</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-                <h4>$25k</h4>
-                <img src="store7.jpg">
-                <h4>$3m</h4>
-                <img src="store8.jpg">
-                <h4>$90km</h4>
-                <img src="store9.jpg">
-                <h4>$1.5m</h4>
-                <img src="store10.jpg">
-                <h4>$25k</h4>
-                <img src="store11.jpg">
-                <h4>$500k</h4>
-                <img src="store12.jpg">
-            </div>
-            <div class="column">
-                <h4>$2m</h4>
-                <img src="store13.jpg">
-                <h4>$500k</h4>
-                <img src="store14.jpg">
-                <h4>$300k</h4>
-                <img src="store15.jpg">
-                <h4>$2.5m</h4>
-                <img src="store16.jpg">
-                <h4>$300k</h4>
-                <img src="store17.jpg">
-                <h4>$150k</h4>
-                <img src="store18.jpg">
-            </div>
-            
-            
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
 </body>
+
 </html>
